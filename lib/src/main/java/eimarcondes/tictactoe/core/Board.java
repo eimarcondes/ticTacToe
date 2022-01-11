@@ -50,7 +50,12 @@ public class Board {
 		return true;
 	}
 
-	public void play() {
+	public boolean play(Player player, Move move) {
+		int i = move.i;
+		int j = move.j;
 		
+		matrix[i][j] = player.symbol;
+		//TODO Checar se o jogador ganhou
+		return false;
 	}
 }
