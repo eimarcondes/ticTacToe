@@ -125,7 +125,7 @@ public class Board {
 		char symbol = player.getSymbol();
 		int lastLine = Constants.BOARD_SIZE - 1;
 
-		for (int i = lastLine, j = 0; i <= 0; i--, j++) {
+		for (int i = lastLine, j = 0; i >= 0; i--, j++) {
 			if (matrix[i][j] != symbol) {
 				return false;
 			}

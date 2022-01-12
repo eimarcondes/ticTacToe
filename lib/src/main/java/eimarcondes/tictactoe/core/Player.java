@@ -1,5 +1,7 @@
 package eimarcondes.tictactoe.core;
 
+import eimarcondes.tictactoe.ui.UI;
+
 public class Player {
 
 	private String name;
@@ -13,12 +15,14 @@ public class Player {
 		this.symbol = symbol;
 	}
 
-	public Move inputMove() {
-		return null;
+	private Move inputMove() {
+		String moveStr = UI.readInput("Jogador: '" + name + "' => ");
+		return new Move(moveStr);
 	}
 
-	public void play() {
-
+	public boolean play() {
+		Move move = inputMove();
+		return board.play(this, move);
 	}
 
 	public String getName() {
